@@ -77,12 +77,8 @@
 		439DD22C2227C36700E555BC /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				439DD22D2227C36700E555BC /* AppDelegate.swift */,
-				439DD22F2227C36700E555BC /* ViewController.swift */,
-				439DD2312227C36700E555BC /* Main.storyboard */,
-				439DD2342227C36B00E555BC /* Assets.xcassets */,
-				439DD2362227C36B00E555BC /* LaunchScreen.storyboard */,
-				439DD2392227C36B00E555BC /* Info.plist */,
+				439DD2522227C4F600E555BC /* Classes */,
+				439DD24F2227C4B500E555BC /* Resources */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -90,10 +86,110 @@
 		439DD2412227C36C00E555BC /* TicTacToeTests */ = {
 			isa = PBXGroup;
 			children = (
-				439DD2422227C36C00E555BC /* TicTacToeTests.swift */,
-				439DD2442227C36C00E555BC /* Info.plist */,
+				439DD25A2227C55C00E555BC /* Tests */,
+				439DD2582227C54D00E555BC /* Resources */,
 			);
 			path = TicTacToeTests;
+			sourceTree = "<group>";
+		};
+		439DD24F2227C4B500E555BC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				439DD2512227C4C600E555BC /* Info */,
+				439DD2502227C4BD00E555BC /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		439DD2502227C4BD00E555BC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				439DD2342227C36B00E555BC /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		439DD2512227C4C600E555BC /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				439DD2392227C36B00E555BC /* Info.plist */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		439DD2522227C4F600E555BC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				439DD2572227C52700E555BC /* Application */,
+				439DD2532227C4FB00E555BC /* GUI */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		439DD2532227C4FB00E555BC /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				439DD2542227C50100E555BC /* Main */,
+				439DD2562227C51200E555BC /* Storyboards */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		439DD2542227C50100E555BC /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				439DD2552227C50A00E555BC /* ViewController */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		439DD2552227C50A00E555BC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				439DD22F2227C36700E555BC /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		439DD2562227C51200E555BC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				439DD2312227C36700E555BC /* Main.storyboard */,
+				439DD2362227C36B00E555BC /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		439DD2572227C52700E555BC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				439DD22D2227C36700E555BC /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		439DD2582227C54D00E555BC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				439DD2592227C55400E555BC /* Info */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		439DD2592227C55400E555BC /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				439DD2442227C36C00E555BC /* Info.plist */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		439DD25A2227C55C00E555BC /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				439DD2422227C36C00E555BC /* TicTacToeTests.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,7 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TicTacToe/Info.plist;
+				INFOPLIST_FILE = TicTacToe/Resources/Info/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,7 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TicTacToe/Info.plist;
+				INFOPLIST_FILE = TicTacToe/Resources/Info/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -398,7 +494,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TicTacToeTests/Info.plist;
+				INFOPLIST_FILE = TicTacToeTests/Resources/Info/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -418,7 +514,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TicTacToeTests/Info.plist;
+				INFOPLIST_FILE = TicTacToeTests/Resources/Info/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
