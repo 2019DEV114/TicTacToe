@@ -29,4 +29,11 @@ final class GameModel {
         let emptyColumn = [PlayerMarkModel?](repeating: nil, count: GameModel.gridLength)
         grid = [[PlayerMarkModel?]](repeating: emptyColumn, count: GameModel.gridLength)
     }
+    
+    func add(mark: PlayerMarkModel, coordinateX: Int, coordinateY: Int) {
+        precondition(coordinateX < grid.count)
+        precondition(coordinateY < grid.count)
+
+        grid[coordinateX][coordinateY] = mark
+    }
 }

@@ -22,4 +22,13 @@ final class GameModelTests: XCTestCase {
         // Then
         XCTAssertNil(sut.grid[0][0])
     }
+    
+    // MARK: - Test grid
+    func testAddMarkZeroZeroChangesGridValue() {
+        // When
+        sut.add(mark: .x, coordinateX: 0, coordinateY: 0)
+   
+        // Then
+        XCTAssertEqual(PlayerMarkModel.x, sut.grid[0][0])
+    }
 }
