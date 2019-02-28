@@ -18,8 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X's turn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fP-vb-x7r">
+                                <rect key="frame" x="156.5" y="70" width="62.5" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" name="MarkText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOT-y2-xuZ" userLabel="Grid container">
-                                <rect key="frame" x="50" y="120" width="275" height="275"/>
+                                <rect key="frame" x="50" y="110.5" width="275" height="275"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Omu-3z-eH8" userLabel="Horizontal separator 1">
                                         <rect key="frame" x="0.0" y="89" width="275" height="2"/>
@@ -249,13 +255,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cOT-y2-xuZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ERx-zc-Fez"/>
+                            <constraint firstItem="0fP-vb-x7r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Jhw-Ed-djl"/>
+                            <constraint firstItem="0fP-vb-x7r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S9D-gx-sHW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cOT-y2-xuZ" secondAttribute="trailing" constant="50" id="iAj-SY-U9x"/>
-                            <constraint firstItem="cOT-y2-xuZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="kY0-JF-7Ad"/>
+                            <constraint firstItem="cOT-y2-xuZ" firstAttribute="top" secondItem="0fP-vb-x7r" secondAttribute="bottom" constant="20" id="kY0-JF-7Ad"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="gridStackView" destination="PzC-fm-SAG" id="gvg-By-xq2"/>
+                        <outlet property="statusLabel" destination="0fP-vb-x7r" id="ZKP-fQ-Pgv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

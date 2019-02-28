@@ -10,6 +10,7 @@ import UIKit
 
 final class GameViewController: UIViewController {
 
+    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var gridStackView: UIStackView!
 
     private var viewModel = GameViewModel()
@@ -31,7 +32,8 @@ final class GameViewController: UIViewController {
 
     private func updateContent() {
         let presentationModel = viewModel.presentationModel
-        
+        statusLabel.text = presentationModel.status
+
         let gridPresentationModel = presentationModel.grid
         for i in 0..<gridPresentationModel.count {
             for j in 0..<gridPresentationModel.count {

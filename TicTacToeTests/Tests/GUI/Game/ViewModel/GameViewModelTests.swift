@@ -23,6 +23,11 @@ final class GameViewModelTests: XCTestCase {
         XCTAssertEqual(3, sut.presentationModel.grid.count)
     }
 
+    func testPresentationModelDefaultStatus() {
+        // Then
+        XCTAssertEqual("X's turn", sut.presentationModel.status)
+    }
+
     // MARK: - Test add mark
     func testAddMarkZeroZeroChangesGridElementPresentationModel() {
         // When
@@ -33,6 +38,38 @@ final class GameViewModelTests: XCTestCase {
         XCTAssertEqual(expectedPresentationModel, sut.presentationModel.grid[0][0])
     }
     
+    func testAddMarkChangesStatusPresentationModel() {
+        // When
+        sut.addMark(coordinateX: 0, coordinateY: 0)
+        
+        // Then
+        XCTAssertEqual("O's turn", sut.presentationModel.status)
+    }
+    
+    func testPlayerXWinsChangesStatusPresentationModel() {
+        // When
+        // X|O|-
+        // X|O|-
+        // X|-|-
+        addMarks(player1: [(0, 0), (0, 1), (0, 2)],
+                 player2: [(1, 0), (1, 1)])
+        
+        // Then
+        XCTAssertEqual("X won!", sut.presentationModel.status)
+    }
+
+    func testPlayerXWinsChangesDisablesUserInteractionPresentationModel() {
+        // When
+        // O|X|-
+        // O|X|-
+        // -|X|-
+        addMarks(player1: [(1, 0), (1, 1), (1, 2)],
+                 player2: [(0, 0), (0, 1)])
+        
+        // Then
+        XCTAssertFalse(sut.presentationModel.grid[2][2].isUserInteractionEnabled)
+    }
+
     // MARK: - Utility
     private func addMarks(player1 player1Marks: [(Int, Int)], player2 player2Marks: [(Int, Int)]) {
         let minCount = min(player1Marks.count, player2Marks.count)

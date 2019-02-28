@@ -28,12 +28,23 @@ final class GameViewModel {
 
     private func updatePresentationModel() {
         var newPresentationModel = GamePresentationModel()
-        
+        let isGamePlaying = game.isGameFinished == false
+
+        if let result = game.result {
+            // The game has finished. Show its result.
+            newPresentationModel.status = result.displayedText()
+        } else if let playerMarkText = game.currentlyPlaying?.displayedText() {
+            // The game is playing. Show whose turn it is.
+            newPresentationModel.status = "\(playerMarkText)'s turn"
+        }
+
         for indexAxisX in 0..<game.grid.count {
             let columnModel = game.grid[indexAxisX]
             var displayedColumn = [GridElementPresentationModel]()
             for markModel in columnModel {
-                let displayedElementModel = GridElementPresentationModel(markModel)
+                var displayedElementModel = GridElementPresentationModel(markModel)
+                let isElementUnmarked = markModel == nil
+                displayedElementModel.isUserInteractionEnabled = isElementUnmarked && isGamePlaying
                 displayedColumn.append(displayedElementModel)
             }
             newPresentationModel.grid.append(displayedColumn)
@@ -41,5 +52,15 @@ final class GameViewModel {
 
         presentationModel = newPresentationModel
     }
+}
 
+extension GameResultModel {
+    fileprivate func displayedText() -> String {
+        switch self {
+        case .draw:
+            return "Draw"
+        case .winner(let player):
+            return "\(player.displayedText()) won!"
+        }
+    }
 }

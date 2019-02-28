@@ -9,4 +9,5 @@ import Foundation
 
 struct GamePresentationModel {
     var grid = [[GridElementPresentationModel]]()
+    var status = ""
 }
