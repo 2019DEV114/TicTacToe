@@ -12,7 +12,8 @@ final class GameViewController: UIViewController {
 
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var gridStackView: UIStackView!
-
+    @IBOutlet weak var resetButton: UIButton!
+    
     private var viewModel = GameViewModel()
 
     override func viewDidLoad() {
@@ -30,10 +31,15 @@ final class GameViewController: UIViewController {
                           coordinateY: elementButton.coordinateY)
     }
 
+    @IBAction func didPressReset() {
+        viewModel.reset()
+    }
+
     private func updateContent() {
         let presentationModel = viewModel.presentationModel
         statusLabel.text = presentationModel.status
-
+        resetButton.isHidden = presentationModel.isResetHidden
+        
         let gridPresentationModel = presentationModel.grid
         for i in 0..<gridPresentationModel.count {
             for j in 0..<gridPresentationModel.count {

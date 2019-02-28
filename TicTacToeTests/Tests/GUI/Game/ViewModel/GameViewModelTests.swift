@@ -28,6 +28,11 @@ final class GameViewModelTests: XCTestCase {
         XCTAssertEqual("X's turn", sut.presentationModel.status)
     }
 
+    func testPresentationModelDefaultResetButtonIsHidden() {
+        // Then
+        XCTAssertTrue(sut.presentationModel.isResetHidden)
+    }
+
     // MARK: - Test add mark
     func testAddMarkZeroZeroChangesGridElementPresentationModel() {
         // When
@@ -68,6 +73,35 @@ final class GameViewModelTests: XCTestCase {
         
         // Then
         XCTAssertFalse(sut.presentationModel.grid[2][2].isUserInteractionEnabled)
+    }
+
+    func testPlayerXWinsShowsResetButtonPresentationModel() {
+        // When
+        // -|O|X
+        // -|X|O
+        // X|-|-
+        addMarks(player1: [(2, 0), (1, 1), (0, 2)],
+                 player2: [(1, 0), (2, 1)])
+        
+        // Then
+        XCTAssertFalse(sut.presentationModel.isResetHidden)
+    }
+
+    // MARK: - Test rest
+    func testResetEnablesUserInterationPresentationModel() {
+        // When
+        sut.reset()
+        
+        // Then
+        XCTAssertTrue(sut.presentationModel.grid[0][0].isUserInteractionEnabled)
+    }
+    
+    func testResetHidesResetButton() {
+        // When
+        sut.reset()
+        
+        // Then
+        XCTAssertTrue(sut.presentationModel.isResetHidden)
     }
 
     // MARK: - Utility

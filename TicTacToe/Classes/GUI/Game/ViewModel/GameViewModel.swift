@@ -26,6 +26,11 @@ final class GameViewModel {
         updatePresentationModel()
     }
 
+    func reset() {
+        game = GameModel()
+        updatePresentationModel()
+    }
+
     private func updatePresentationModel() {
         var newPresentationModel = GamePresentationModel()
         let isGamePlaying = game.isGameFinished == false
@@ -38,6 +43,7 @@ final class GameViewModel {
             newPresentationModel.status = "\(playerMarkText)'s turn"
         }
 
+        // Compute the grid presentation model
         for indexAxisX in 0..<game.grid.count {
             let columnModel = game.grid[indexAxisX]
             var displayedColumn = [GridElementPresentationModel]()
@@ -49,6 +55,8 @@ final class GameViewModel {
             }
             newPresentationModel.grid.append(displayedColumn)
         }
+
+        newPresentationModel.isResetHidden = isGamePlaying == true
 
         presentationModel = newPresentationModel
     }

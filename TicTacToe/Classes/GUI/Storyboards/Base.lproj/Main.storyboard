@@ -251,19 +251,29 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="fLd-nt-r6M"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hqw-eW-yJ7">
+                                <rect key="frame" x="168" y="587" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="didPressReset" destination="BYZ-38-t0r" eventType="touchUpInside" id="hMi-NE-oIA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hqw-eW-yJ7" secondAttribute="bottom" constant="50" id="4ev-HJ-aLY"/>
                             <constraint firstItem="cOT-y2-xuZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ERx-zc-Fez"/>
                             <constraint firstItem="0fP-vb-x7r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Jhw-Ed-djl"/>
                             <constraint firstItem="0fP-vb-x7r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S9D-gx-sHW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cOT-y2-xuZ" secondAttribute="trailing" constant="50" id="iAj-SY-U9x"/>
                             <constraint firstItem="cOT-y2-xuZ" firstAttribute="top" secondItem="0fP-vb-x7r" secondAttribute="bottom" constant="20" id="kY0-JF-7Ad"/>
+                            <constraint firstItem="hqw-eW-yJ7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zF8-67-a34"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="gridStackView" destination="PzC-fm-SAG" id="gvg-By-xq2"/>
+                        <outlet property="resetButton" destination="hqw-eW-yJ7" id="C34-lW-88k"/>
                         <outlet property="statusLabel" destination="0fP-vb-x7r" id="ZKP-fQ-Pgv"/>
                     </connections>
                 </viewController>
