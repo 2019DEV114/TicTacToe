@@ -16,6 +16,8 @@
 		439DD25F2227C8A500E555BC /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD25E2227C8A500E555BC /* GameModel.swift */; };
 		439DD2622227CA2300E555BC /* GameModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2612227CA2300E555BC /* GameModelTests.swift */; };
 		439DD2642227CDD700E555BC /* GameResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2632227CDD700E555BC /* GameResultModel.swift */; };
+		439DD2682227DA5F00E555BC /* GridElementPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2672227DA5F00E555BC /* GridElementPresentationModel.swift */; };
+		439DD26A2227DA8300E555BC /* GamePresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2692227DA8300E555BC /* GamePresentationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		439DD25E2227C8A500E555BC /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		439DD2612227CA2300E555BC /* GameModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelTests.swift; sourceTree = "<group>"; };
 		439DD2632227CDD700E555BC /* GameResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultModel.swift; sourceTree = "<group>"; };
+		439DD2672227DA5F00E555BC /* GridElementPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridElementPresentationModel.swift; sourceTree = "<group>"; };
+		439DD2692227DA8300E555BC /* GamePresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresentationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +226,8 @@
 		439DD2652227D9C700E555BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				439DD2672227DA5F00E555BC /* GridElementPresentationModel.swift */,
+				439DD2692227DA8300E555BC /* GamePresentationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,8 +341,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439DD2682227DA5F00E555BC /* GridElementPresentationModel.swift in Sources */,
 				439DD25D2227C84100E555BC /* PlayerMarkModel.swift in Sources */,
 				439DD25F2227C8A500E555BC /* GameModel.swift in Sources */,
+				439DD26A2227DA8300E555BC /* GamePresentationModel.swift in Sources */,
 				439DD2302227C36700E555BC /* ViewController.swift in Sources */,
 				439DD22E2227C36700E555BC /* AppDelegate.swift in Sources */,
 				439DD2642227CDD700E555BC /* GameResultModel.swift in Sources */,
