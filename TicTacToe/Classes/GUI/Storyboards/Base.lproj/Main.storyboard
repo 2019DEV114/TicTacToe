@@ -68,6 +68,9 @@
                                                                 <integer key="value" value="0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didPressWithElementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hNl-b6-ShD"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrF-ym-GmP" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="91.5" width="91.5" height="92"/>
@@ -82,6 +85,9 @@
                                                                 <integer key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didPressWithElementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cc-Zm-pS3"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBV-Zh-VeU" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="183.5" width="91.5" height="91.5"/>
@@ -96,6 +102,9 @@
                                                                 <integer key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didPressWithElementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l5A-C0-ZFb"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -115,6 +124,9 @@
                                                                 <integer key="value" value="0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didPressWithElementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vBB-Hs-jdJ"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZY-pB-F1h" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="91.5" width="92" height="92"/>
@@ -129,6 +141,9 @@
                                                                 <integer key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didPressWithElementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xhh-ix-54Q"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0m-ES-J56" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="183.5" width="92" height="91.5"/>
@@ -143,6 +158,9 @@
                                                                 <integer key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didPressWithElementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nol-JB-YUj"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -162,6 +180,9 @@
                                                                 <integer key="value" value="0"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didPressWithElementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bzE-bg-sBF"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nud-SX-lEg" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="91.5" width="91.5" height="92"/>
@@ -176,6 +197,9 @@
                                                                 <integer key="value" value="1"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didPressWithElementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gUQ-MJ-ahN"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mk-OR-DhS" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="183.5" width="91.5" height="91.5"/>
@@ -190,6 +214,9 @@
                                                                 <integer key="value" value="2"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="didPressWithElementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YTK-tP-vNh"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

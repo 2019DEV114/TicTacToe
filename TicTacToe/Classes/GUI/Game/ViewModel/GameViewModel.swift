@@ -8,11 +8,21 @@
 import Foundation
 
 final class GameViewModel {
-    private(set) var presentationModel = GamePresentationModel()
-    
+    private(set) var presentationModel = GamePresentationModel() {
+        didSet {
+            presentationModelDidChange()
+        }
+    }
+    var presentationModelDidChange: () -> Void = { }
+
     private var game = GameModel()
 
     init() {
+        updatePresentationModel()
+    }
+
+    func addMark(coordinateX: Int, coordinateY: Int) {
+        game.addMark(coordinateX: coordinateX, coordinateY: coordinateY)
         updatePresentationModel()
     }
 

@@ -16,8 +16,17 @@ final class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        viewModel.presentationModelDidChange = { [weak self] in
+            self?.updateContent()
+        }
+
         updateContent()
+    }
+
+    @IBAction func didPress(elementButton: GridElementButton) {
+        viewModel.addMark(coordinateX: elementButton.coordinateX,
+                          coordinateY: elementButton.coordinateY)
     }
 
     private func updateContent() {

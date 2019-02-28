@@ -16,3 +16,5 @@ struct GridElementPresentationModel {
         text = markModel?.displayedText() ?? ""
     }
 }
+
+extension GridElementPresentationModel: Equatable {}
