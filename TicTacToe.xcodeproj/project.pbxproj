@@ -20,6 +20,7 @@
 		439DD26A2227DA8300E555BC /* GamePresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2692227DA8300E555BC /* GamePresentationModel.swift */; };
 		439DD26C2227DAD900E555BC /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD26B2227DAD900E555BC /* GameViewModel.swift */; };
 		439DD2712227DB0600E555BC /* GameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2702227DB0600E555BC /* GameViewModelTests.swift */; };
+		439DD2732227DEFA00E555BC /* GridElementButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2722227DEFA00E555BC /* GridElementButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		439DD2692227DA8300E555BC /* GamePresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresentationModel.swift; sourceTree = "<group>"; };
 		439DD26B2227DAD900E555BC /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		439DD2702227DB0600E555BC /* GameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelTests.swift; sourceTree = "<group>"; };
+		439DD2722227DEFA00E555BC /* GridElementButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridElementButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				439DD22F2227C36700E555BC /* GameViewController.swift */,
+				439DD2722227DEFA00E555BC /* GridElementButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				439DD2682227DA5F00E555BC /* GridElementPresentationModel.swift in Sources */,
+				439DD2732227DEFA00E555BC /* GridElementButton.swift in Sources */,
 				439DD25D2227C84100E555BC /* PlayerMarkModel.swift in Sources */,
 				439DD25F2227C8A500E555BC /* GameModel.swift in Sources */,
 				439DD26A2227DA8300E555BC /* GamePresentationModel.swift in Sources */,

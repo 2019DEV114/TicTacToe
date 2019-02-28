@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,12 +17,233 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOT-y2-xuZ" userLabel="Grid container">
+                                <rect key="frame" x="50" y="120" width="275" height="275"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Omu-3z-eH8" userLabel="Horizontal separator 1">
+                                        <rect key="frame" x="0.0" y="89" width="275" height="2"/>
+                                        <color key="backgroundColor" name="GridSeparator"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="P8Q-UM-GAc"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEV-Bo-6kc" userLabel="Horizontal separator 2">
+                                        <rect key="frame" x="0.0" y="179.5" width="275" height="2"/>
+                                        <color key="backgroundColor" name="GridSeparator"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="bhf-yh-1of"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzc-nR-Zno" userLabel="Vertical separator 1">
+                                        <rect key="frame" x="89" y="0.0" width="2" height="275"/>
+                                        <color key="backgroundColor" name="GridSeparator"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="2" id="8Mr-s3-40A"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AeG-EE-gW8" userLabel="Vertical separator 2">
+                                        <rect key="frame" x="179.5" y="0.0" width="2" height="275"/>
+                                        <color key="backgroundColor" name="GridSeparator"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="2" id="rAd-F0-Raa"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PzC-fm-SAG" userLabel="Grid Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="275"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="moP-3v-2t3" userLabel="Column 1 Stack View">
+                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="275"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdY-04-Hd9" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="91.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                        <color key="tintColor" name="MarkText"/>
+                                                        <state key="normal" title="0, 0"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateX">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateY">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrF-ym-GmP" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="91.5" width="91.5" height="92"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                        <color key="tintColor" name="MarkText"/>
+                                                        <state key="normal" title="0, 1"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateX">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateY">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBV-Zh-VeU" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="183.5" width="91.5" height="91.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                        <color key="tintColor" name="MarkText"/>
+                                                        <state key="normal" title="0, 2"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateX">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateY">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nyf-DC-mRA" userLabel="Column 2 Stack View">
+                                                <rect key="frame" x="91.5" y="0.0" width="92" height="275"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppf-Cl-N5s" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="92" height="91.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                        <color key="tintColor" name="MarkText"/>
+                                                        <state key="normal" title="1, 0"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateX">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateY">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZY-pB-F1h" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="91.5" width="92" height="92"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                        <color key="tintColor" name="MarkText"/>
+                                                        <state key="normal" title="1, 1"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateX">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateY">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0m-ES-J56" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="183.5" width="92" height="91.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                        <color key="tintColor" name="MarkText"/>
+                                                        <state key="normal" title="1, 2"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateX">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateY">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6cj-jV-YYW" userLabel="Column 1 Stack View">
+                                                <rect key="frame" x="183.5" y="0.0" width="91.5" height="275"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbz-PM-wjx" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="91.5" height="91.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                        <color key="tintColor" name="MarkText"/>
+                                                        <state key="normal" title="2, 0"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateX">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateY">
+                                                                <integer key="value" value="0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nud-SX-lEg" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="91.5" width="91.5" height="92"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                        <color key="tintColor" name="MarkText"/>
+                                                        <state key="normal" title="2, 1"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateX">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateY">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Mk-OR-DhS" customClass="GridElementButton" customModule="TicTacToe" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="183.5" width="91.5" height="91.5"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                        <color key="tintColor" name="MarkText"/>
+                                                        <state key="normal" title="2, 2"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateX">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="coordinateY">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="GridBackground"/>
+                                <constraints>
+                                    <constraint firstItem="PzC-fm-SAG" firstAttribute="top" secondItem="fLd-nt-r6M" secondAttribute="top" id="8Je-uY-N0v"/>
+                                    <constraint firstItem="fLd-nt-r6M" firstAttribute="trailing" secondItem="PEV-Bo-6kc" secondAttribute="trailing" id="FnG-c3-Vaw"/>
+                                    <constraint firstItem="Omu-3z-eH8" firstAttribute="leading" secondItem="cOT-y2-xuZ" secondAttribute="leading" id="Lzw-Me-Lkv"/>
+                                    <constraint firstItem="fLd-nt-r6M" firstAttribute="trailing" secondItem="PzC-fm-SAG" secondAttribute="trailing" id="NxQ-Yb-CJj"/>
+                                    <constraint firstItem="PzC-fm-SAG" firstAttribute="leading" secondItem="fLd-nt-r6M" secondAttribute="leading" id="VEm-uc-GtS"/>
+                                    <constraint firstItem="Omu-3z-eH8" firstAttribute="trailing" secondItem="cOT-y2-xuZ" secondAttribute="trailing" id="W7l-Id-mKw"/>
+                                    <constraint firstItem="fLd-nt-r6M" firstAttribute="bottom" secondItem="PzC-fm-SAG" secondAttribute="bottom" id="fGU-9q-oxI"/>
+                                    <constraint firstItem="AeG-EE-gW8" firstAttribute="trailing" secondItem="fLd-nt-r6M" secondAttribute="trailing" multiplier="0.66" id="hPM-hN-Gb4"/>
+                                    <constraint firstItem="PEV-Bo-6kc" firstAttribute="leading" secondItem="fLd-nt-r6M" secondAttribute="leading" id="hfU-6b-B6q"/>
+                                    <constraint firstItem="Omu-3z-eH8" firstAttribute="bottom" secondItem="fLd-nt-r6M" secondAttribute="bottom" multiplier="0.33" id="iJb-vx-SWr"/>
+                                    <constraint firstItem="AeG-EE-gW8" firstAttribute="top" secondItem="cOT-y2-xuZ" secondAttribute="top" id="jiN-uH-K6Z"/>
+                                    <constraint firstAttribute="width" secondItem="cOT-y2-xuZ" secondAttribute="height" multiplier="1:1" id="mAF-0c-Rrv"/>
+                                    <constraint firstAttribute="bottom" secondItem="AeG-EE-gW8" secondAttribute="bottom" id="noY-LF-97l"/>
+                                    <constraint firstItem="PEV-Bo-6kc" firstAttribute="bottom" secondItem="fLd-nt-r6M" secondAttribute="bottom" multiplier="0.66" id="p5Y-gb-Rlz"/>
+                                    <constraint firstItem="Qzc-nR-Zno" firstAttribute="top" secondItem="fLd-nt-r6M" secondAttribute="top" id="q3K-0V-QYK"/>
+                                    <constraint firstItem="Qzc-nR-Zno" firstAttribute="trailing" secondItem="fLd-nt-r6M" secondAttribute="trailing" multiplier="0.33" id="tiz-2F-dYa"/>
+                                    <constraint firstItem="fLd-nt-r6M" firstAttribute="bottom" secondItem="Qzc-nR-Zno" secondAttribute="bottom" id="z5W-ke-FGR"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="fLd-nt-r6M"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cOT-y2-xuZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ERx-zc-Fez"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cOT-y2-xuZ" secondAttribute="trailing" constant="50" id="iAj-SY-U9x"/>
+                            <constraint firstItem="cOT-y2-xuZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="kY0-JF-7Ad"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="gridStackView" destination="PzC-fm-SAG" id="gvg-By-xq2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="GridBackground">
+            <color red="0.45490196078431372" green="0.80392156862745101" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GridSeparator">
+            <color red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MarkText">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
