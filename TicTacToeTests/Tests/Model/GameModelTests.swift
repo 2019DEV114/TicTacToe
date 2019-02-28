@@ -85,6 +85,18 @@ final class GameModelTests: XCTestCase {
         XCTAssertEqual(GameResultModel.winner(.x), sut.result)
     }
 
+    func testThreeHorizontalOChangesStatusToWinner() {
+        // When
+        // O|O|O
+        // X|-|X
+        // -|-|X
+        addMarks(player1: [(0, 1), (2, 1), (2, 2)],
+                 player2: [(0, 0), (1, 0), (2, 0)])
+        
+        // Then
+        XCTAssertEqual(GameResultModel.winner(.o), sut.result)
+    }
+
     // MARK: - Utility
     private func addMarks(player1 player1Marks: [(Int, Int)], player2 player2Marks: [(Int, Int)]) {
         let minCount = min(player1Marks.count, player2Marks.count)

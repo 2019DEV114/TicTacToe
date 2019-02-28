@@ -56,6 +56,11 @@ final class GameModel {
             return
         }
 
+        if let playerMark = grid.winnerOnHorizontalAxis() {
+            result = .winner(playerMark)
+            return
+        }
+
         if grid.allPositionsPlayed() == true {
             result = GameResultModel.draw
             return
@@ -78,6 +83,17 @@ extension Array where Element == [PlayerMarkModel?] {
             guard let first = self[i][0] else { continue rowsLoop }
             columnsLoop: for j in 1..<count {
                 guard self[i][j] == first else { continue rowsLoop }
+            }
+            return first
+        }
+        return nil
+    }
+
+    fileprivate func winnerOnHorizontalAxis() -> PlayerMarkModel? {
+        columnsLoop: for j in 0..<count {
+            guard let first = self[0][j] else { continue columnsLoop }
+            rowsLoop: for i in 1..<count {
+                guard self[i][j] == first else { continue columnsLoop }
             }
             return first
         }
