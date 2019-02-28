@@ -13,6 +13,7 @@
 		439DD2352227C36B00E555BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439DD2342227C36B00E555BC /* Assets.xcassets */; };
 		439DD2382227C36B00E555BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439DD2362227C36B00E555BC /* LaunchScreen.storyboard */; };
 		439DD2432227C36C00E555BC /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2422227C36C00E555BC /* TicTacToeTests.swift */; };
+		439DD25D2227C84100E555BC /* PlayerMarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD25C2227C84100E555BC /* PlayerMarkModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		439DD23E2227C36C00E555BC /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		439DD2422227C36C00E555BC /* TicTacToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeTests.swift; sourceTree = "<group>"; };
 		439DD2442227C36C00E555BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		439DD25C2227C84100E555BC /* PlayerMarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMarkModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				439DD2572227C52700E555BC /* Application */,
 				439DD2532227C4FB00E555BC /* GUI */,
+				439DD25B2227C81D00E555BC /* Model */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -190,6 +193,14 @@
 				439DD2422227C36C00E555BC /* TicTacToeTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		439DD25B2227C81D00E555BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				439DD25C2227C84100E555BC /* PlayerMarkModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439DD25D2227C84100E555BC /* PlayerMarkModel.swift in Sources */,
 				439DD2302227C36700E555BC /* ViewController.swift in Sources */,
 				439DD22E2227C36700E555BC /* AppDelegate.swift in Sources */,
 			);
