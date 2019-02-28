@@ -29,6 +29,9 @@ final class GameModel {
 
     /// The result of the game. nil means the game is playing.
     private(set) var result: GameResultModel?
+    var isGameFinished: Bool {
+        return result != nil
+    }
 
     init() {
         currentlyPlaying = player1
@@ -39,20 +42,48 @@ final class GameModel {
     func addMark(coordinateX: Int, coordinateY: Int) {
         precondition(coordinateX < grid.count)
         precondition(coordinateY < grid.count)
-        precondition(result == nil)
+        precondition(isGameFinished == false)
         precondition(grid[coordinateX][coordinateY] == nil)
         
         grid[coordinateX][coordinateY] = currentlyPlaying
-        currentlyPlaying = currentlyPlaying == player1 ? player2 : player1
-        
+        updateResultIfNeeded()
+        updateCurrentlyPlayingPlayer()
+    }
+    
+    private func updateResultIfNeeded() {
+        if let playerMark = grid.winnerOnVerticalAxis() {
+            result = .winner(playerMark)
+            return
+        }
+
         if grid.allPositionsPlayed() == true {
             result = GameResultModel.draw
             return
         }
     }
+    
+    private func updateCurrentlyPlayingPlayer() {
+        guard isGameFinished == false else {
+            currentlyPlaying = nil
+            return
+        }
+        
+        currentlyPlaying = currentlyPlaying == player1 ? player2 : player1
+    }
 }
 
 extension Array where Element == [PlayerMarkModel?] {
+    fileprivate func winnerOnVerticalAxis() -> PlayerMarkModel? {
+        rowsLoop: for i in 0..<count {
+            guard let first = self[i][0] else { continue rowsLoop }
+            columnsLoop: for j in 1..<count {
+                guard self[i][j] == first else { continue rowsLoop }
+            }
+            return first
+        }
+        return nil
+    }
+
     fileprivate func allPositionsPlayed() -> Bool {
         let countAllPossiblePositions = count * count
         let flattenElements = joined()
