@@ -1,5 +1,5 @@
 //
-//  PlayerMarkModel.swift
+//  GameResultModel.swift
 //  TicTacToe
 //
 //  Created by 2019_DEV_114 on 2/28/19.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum PlayerMarkModel {
-    case x
-    case o
+enum GameResultModel {
+    case draw
+    case winner(PlayerMarkModel)
 }
 
-extension PlayerMarkModel: Equatable {}
+extension GameResultModel: Equatable {}

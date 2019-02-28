@@ -55,4 +55,28 @@ final class GameModelTests: XCTestCase {
         XCTAssertEqual(PlayerMarkModel.x, sut.currentlyPlaying)
     }
 
+    // MARK: - Test result
+    func testDefaultResultIsNil() {
+        // Then
+        XCTAssertNil(sut.result)
+    }
+    
+    func testAllMovesMadeChangesStatusToDraw() {
+        // When
+        // X|O|X
+        // X|X|O
+        // O|X|O
+        sut.addMark(coordinateX: 0, coordinateY: 0)
+        sut.addMark(coordinateX: 0, coordinateY: 2)
+        sut.addMark(coordinateX: 0, coordinateY: 1)
+        sut.addMark(coordinateX: 1, coordinateY: 0)
+        sut.addMark(coordinateX: 1, coordinateY: 1)
+        sut.addMark(coordinateX: 2, coordinateY: 1)
+        sut.addMark(coordinateX: 1, coordinateY: 2)
+        sut.addMark(coordinateX: 2, coordinateY: 2)
+        sut.addMark(coordinateX: 2, coordinateY: 0)
+
+        // Then
+        XCTAssertEqual(GameResultModel.draw, sut.result)
+    }
 }
