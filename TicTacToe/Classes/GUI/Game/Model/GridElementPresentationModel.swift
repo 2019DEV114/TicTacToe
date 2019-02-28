@@ -10,6 +10,9 @@ import Foundation
 struct GridElementPresentationModel {
     var text: String?
     var isUserInteractionEnabled = true
-}
 
-extension GridElementPresentationModel: Equatable {}
+    init(_ markModel: PlayerMarkModel?) {
+        isUserInteractionEnabled = markModel == nil
+        text = markModel?.displayedText() ?? ""
+    }
+}

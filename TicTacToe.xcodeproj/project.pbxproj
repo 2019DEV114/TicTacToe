@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		439DD22E2227C36700E555BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD22D2227C36700E555BC /* AppDelegate.swift */; };
-		439DD2302227C36700E555BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD22F2227C36700E555BC /* ViewController.swift */; };
+		439DD2302227C36700E555BC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD22F2227C36700E555BC /* GameViewController.swift */; };
 		439DD2332227C36700E555BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439DD2312227C36700E555BC /* Main.storyboard */; };
 		439DD2352227C36B00E555BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439DD2342227C36B00E555BC /* Assets.xcassets */; };
 		439DD2382227C36B00E555BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439DD2362227C36B00E555BC /* LaunchScreen.storyboard */; };
@@ -18,6 +18,8 @@
 		439DD2642227CDD700E555BC /* GameResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2632227CDD700E555BC /* GameResultModel.swift */; };
 		439DD2682227DA5F00E555BC /* GridElementPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2672227DA5F00E555BC /* GridElementPresentationModel.swift */; };
 		439DD26A2227DA8300E555BC /* GamePresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2692227DA8300E555BC /* GamePresentationModel.swift */; };
+		439DD26C2227DAD900E555BC /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD26B2227DAD900E555BC /* GameViewModel.swift */; };
+		439DD2712227DB0600E555BC /* GameViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2702227DB0600E555BC /* GameViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +35,7 @@
 /* Begin PBXFileReference section */
 		439DD22A2227C36700E555BC /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439DD22D2227C36700E555BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		439DD22F2227C36700E555BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		439DD22F2227C36700E555BC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		439DD2322227C36700E555BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		439DD2342227C36B00E555BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		439DD2372227C36B00E555BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +48,8 @@
 		439DD2632227CDD700E555BC /* GameResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultModel.swift; sourceTree = "<group>"; };
 		439DD2672227DA5F00E555BC /* GridElementPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridElementPresentationModel.swift; sourceTree = "<group>"; };
 		439DD2692227DA8300E555BC /* GamePresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresentationModel.swift; sourceTree = "<group>"; };
+		439DD26B2227DAD900E555BC /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		439DD2702227DB0600E555BC /* GameViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +163,7 @@
 		439DD2552227C50A00E555BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				439DD22F2227C36700E555BC /* ViewController.swift */,
+				439DD22F2227C36700E555BC /* GameViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +204,7 @@
 		439DD25A2227C55C00E555BC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				439DD26D2227DAF000E555BC /* GUI */,
 				439DD2602227CA0500E555BC /* Model */,
 			);
 			path = Tests;
@@ -235,6 +240,31 @@
 		439DD2662227D9D900E555BC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				439DD26B2227DAD900E555BC /* GameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		439DD26D2227DAF000E555BC /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				439DD26E2227DAF700E555BC /* Game */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		439DD26E2227DAF700E555BC /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				439DD26F2227DAFC00E555BC /* ViewModel */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		439DD26F2227DAFC00E555BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				439DD2702227DB0600E555BC /* GameViewModelTests.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -345,7 +375,8 @@
 				439DD25D2227C84100E555BC /* PlayerMarkModel.swift in Sources */,
 				439DD25F2227C8A500E555BC /* GameModel.swift in Sources */,
 				439DD26A2227DA8300E555BC /* GamePresentationModel.swift in Sources */,
-				439DD2302227C36700E555BC /* ViewController.swift in Sources */,
+				439DD26C2227DAD900E555BC /* GameViewModel.swift in Sources */,
+				439DD2302227C36700E555BC /* GameViewController.swift in Sources */,
 				439DD22E2227C36700E555BC /* AppDelegate.swift in Sources */,
 				439DD2642227CDD700E555BC /* GameResultModel.swift in Sources */,
 			);
@@ -355,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439DD2712227DB0600E555BC /* GameViewModelTests.swift in Sources */,
 				439DD2622227CA2300E555BC /* GameModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

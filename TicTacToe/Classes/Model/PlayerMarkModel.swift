@@ -13,3 +13,14 @@ enum PlayerMarkModel {
 }
 
 extension PlayerMarkModel: Equatable {}
+
+extension PlayerMarkModel {
+    func displayedText() -> String {
+        switch self {
+        case .x:
+            return "X"
+        case .o:
+            return "O"
+        }
+    }
+}
