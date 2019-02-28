@@ -12,8 +12,9 @@
 		439DD2332227C36700E555BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439DD2312227C36700E555BC /* Main.storyboard */; };
 		439DD2352227C36B00E555BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439DD2342227C36B00E555BC /* Assets.xcassets */; };
 		439DD2382227C36B00E555BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439DD2362227C36B00E555BC /* LaunchScreen.storyboard */; };
-		439DD2432227C36C00E555BC /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2422227C36C00E555BC /* TicTacToeTests.swift */; };
 		439DD25D2227C84100E555BC /* PlayerMarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD25C2227C84100E555BC /* PlayerMarkModel.swift */; };
+		439DD25F2227C8A500E555BC /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD25E2227C8A500E555BC /* GameModel.swift */; };
+		439DD2622227CA2300E555BC /* GameModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439DD2612227CA2300E555BC /* GameModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +36,10 @@
 		439DD2372227C36B00E555BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		439DD2392227C36B00E555BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439DD23E2227C36C00E555BC /* TicTacToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		439DD2422227C36C00E555BC /* TicTacToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeTests.swift; sourceTree = "<group>"; };
 		439DD2442227C36C00E555BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439DD25C2227C84100E555BC /* PlayerMarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMarkModel.swift; sourceTree = "<group>"; };
+		439DD25E2227C8A500E555BC /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		439DD2612227CA2300E555BC /* GameModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,7 +192,7 @@
 		439DD25A2227C55C00E555BC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				439DD2422227C36C00E555BC /* TicTacToeTests.swift */,
+				439DD2602227CA0500E555BC /* Model */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -199,6 +201,15 @@
 			isa = PBXGroup;
 			children = (
 				439DD25C2227C84100E555BC /* PlayerMarkModel.swift */,
+				439DD25E2227C8A500E555BC /* GameModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		439DD2602227CA0500E555BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				439DD2612227CA2300E555BC /* GameModelTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,6 +267,7 @@
 					};
 					439DD23D2227C36C00E555BC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 439DD2292227C36700E555BC;
 					};
 				};
@@ -305,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				439DD25D2227C84100E555BC /* PlayerMarkModel.swift in Sources */,
+				439DD25F2227C8A500E555BC /* GameModel.swift in Sources */,
 				439DD2302227C36700E555BC /* ViewController.swift in Sources */,
 				439DD22E2227C36700E555BC /* AppDelegate.swift in Sources */,
 			);
@@ -314,7 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				439DD2432227C36C00E555BC /* TicTacToeTests.swift in Sources */,
+				439DD2622227CA2300E555BC /* GameModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +518,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TicTacToeTests/Resources/Info/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -514,6 +528,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.2019DEV114.TicTacToeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TicTacToe.app/TicTacToe";
@@ -525,6 +540,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TicTacToeTests/Resources/Info/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
