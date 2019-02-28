@@ -26,9 +26,33 @@ final class GameModelTests: XCTestCase {
     // MARK: - Test grid
     func testAddMarkZeroZeroChangesGridValue() {
         // When
-        sut.add(mark: .x, coordinateX: 0, coordinateY: 0)
+        sut.addMark(coordinateX: 0, coordinateY: 0)
    
         // Then
         XCTAssertEqual(PlayerMarkModel.x, sut.grid[0][0])
     }
+    
+    // MARK: - Test currently playing player
+    func testDefaultCurrentlyPlayingPlayer() {
+        // Then
+        XCTAssertEqual(PlayerMarkModel.x, sut.currentlyPlaying)
+    }
+    
+    func testAddingOneMarkChangesCurrentPlayingPlayer() {
+        // When
+        sut.addMark(coordinateX: 1, coordinateY: 1)
+        
+        // Then
+        XCTAssertEqual(PlayerMarkModel.o, sut.currentlyPlaying)
+    }
+    
+    func testAddingTwoMarksChangesCurrentPlayingPlayer() {
+        // When
+        sut.addMark(coordinateX: 1, coordinateY: 1)
+        sut.addMark(coordinateX: 2, coordinateY: 2)
+        
+        // Then
+        XCTAssertEqual(PlayerMarkModel.x, sut.currentlyPlaying)
+    }
+
 }

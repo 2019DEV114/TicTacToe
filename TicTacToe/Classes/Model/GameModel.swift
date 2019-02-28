@@ -13,7 +13,9 @@ final class GameModel {
     
     let player1 = PlayerMarkModel.x
     let player2 = PlayerMarkModel.o
-    
+    /// Whose turn it is.
+    private(set) var currentlyPlaying: PlayerMarkModel?
+
     /**
     A 3x3 matrix holding the game's marks.
     Each element can be X, O or nil. nil means the position hasn't been played.
@@ -26,14 +28,16 @@ final class GameModel {
     private(set) var grid: [[PlayerMarkModel?]]
 
     init() {
+        currentlyPlaying = player1
         let emptyColumn = [PlayerMarkModel?](repeating: nil, count: GameModel.gridLength)
         grid = [[PlayerMarkModel?]](repeating: emptyColumn, count: GameModel.gridLength)
     }
-    
-    func add(mark: PlayerMarkModel, coordinateX: Int, coordinateY: Int) {
+
+    func addMark(coordinateX: Int, coordinateY: Int) {
         precondition(coordinateX < grid.count)
         precondition(coordinateY < grid.count)
 
-        grid[coordinateX][coordinateY] = mark
+        grid[coordinateX][coordinateY] = currentlyPlaying
+        currentlyPlaying = currentlyPlaying == player1 ? player2 : player1
     }
 }
