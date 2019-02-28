@@ -61,6 +61,11 @@ final class GameModel {
             return
         }
 
+        if let playerMark = grid.winnerOnDiagonals() {
+            result = .winner(playerMark)
+            return
+        }
+
         if grid.allPositionsPlayed() == true {
             result = GameResultModel.draw
             return
@@ -97,6 +102,24 @@ extension Array where Element == [PlayerMarkModel?] {
             }
             return first
         }
+        return nil
+    }
+
+    fileprivate func winnerOnDiagonals() -> PlayerMarkModel? {
+        // Check if all marks are the same on the diagonal top left(0, 0) -> bottom right(2, 2)
+        var first = self[0][0]
+        var remainingElements = (1..<count).map { self[$0][$0] }
+        if remainingElements.allSatisfy({ $0 == first }) {
+            return first
+        }
+
+        // Check if all marks are the same on the diagonal top right(2, 0) -> bottom left(0, 2)
+        first = self[count - 1][0]
+        remainingElements = (1..<count).map { self[count - 1 - $0][$0] }
+        if remainingElements.allSatisfy({ $0 == first }) {
+            return first
+        }
+        
         return nil
     }
 
