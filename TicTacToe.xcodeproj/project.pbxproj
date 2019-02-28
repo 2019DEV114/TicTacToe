@@ -136,26 +136,28 @@
 		439DD2532227C4FB00E555BC /* GUI */ = {
 			isa = PBXGroup;
 			children = (
-				439DD2542227C50100E555BC /* Main */,
+				439DD2542227C50100E555BC /* Game */,
 				439DD2562227C51200E555BC /* Storyboards */,
 			);
 			path = GUI;
 			sourceTree = "<group>";
 		};
-		439DD2542227C50100E555BC /* Main */ = {
+		439DD2542227C50100E555BC /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				439DD2552227C50A00E555BC /* ViewController */,
+				439DD2662227D9D900E555BC /* ViewModel */,
+				439DD2552227C50A00E555BC /* Views */,
+				439DD2652227D9C700E555BC /* Model */,
 			);
-			path = Main;
+			path = Game;
 			sourceTree = "<group>";
 		};
-		439DD2552227C50A00E555BC /* ViewController */ = {
+		439DD2552227C50A00E555BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				439DD22F2227C36700E555BC /* ViewController.swift */,
 			);
-			path = ViewController;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		439DD2562227C51200E555BC /* Storyboards */ = {
@@ -215,6 +217,20 @@
 				439DD2612227CA2300E555BC /* GameModelTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		439DD2652227D9C700E555BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		439DD2662227D9D900E555BC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
